@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-20 font-sans">
       {/* Header */}
-      <header className="bg-[#00bd56] text-white shadow-lg sticky top-0 z-20">
+      <header className="bg-[#1877F2] text-white shadow-lg sticky top-0 z-20">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <TrendingUp className="w-6 h-6" />
@@ -59,10 +59,10 @@ function App() {
       <main className="max-w-6xl mx-auto px-4 py-8">
         
         {/* Input Card */}
-        <div className="bg-white rounded-xl shadow-md border border-[#00bd56]/20 p-6 mb-10">
-            <div className="flex items-center space-x-2 mb-6 border-b border-[#00bd56]/20 pb-4">
-                <Calculator className="text-[#00bd56] w-6 h-6" />
-                <h2 className="text-xl font-bold text-[#00bd56]">Parâmetros da Simulação</h2>
+        <div className="bg-white rounded-xl shadow-md border border-[#1877F2]/20 p-6 mb-10">
+            <div className="flex items-center space-x-2 mb-6 border-b border-[#1877F2]/20 pb-4">
+                <Calculator className="text-[#1877F2] w-6 h-6" />
+                <h2 className="text-xl font-bold text-[#1877F2]">Parâmetros da Simulação</h2>
             </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -78,7 +78,7 @@ function App() {
                   type="number"
                   min="0"
                   step="0.01"
-                  className="block w-full rounded-md border-gray-300 pl-10 py-3 focus:border-[#00bd56] focus:ring-[#00bd56] sm:text-lg bg-gray-50 border transition-colors outline-none"
+                  className="block w-full rounded-md border-gray-300 pl-10 py-3 focus:border-[#1877F2] focus:ring-[#1877F2] sm:text-lg bg-gray-50 border transition-colors outline-none"
                   placeholder="0,00"
                   value={input.initialValue || ''}
                   onChange={(e) => handleInputChange('initialValue', parseFloat(e.target.value) || 0)}
@@ -97,7 +97,7 @@ function App() {
                   type="number"
                   min="0"
                   step="0.01"
-                  className="block w-full rounded-md border-gray-300 pl-10 py-3 focus:border-[#00bd56] focus:ring-[#00bd56] sm:text-lg bg-gray-50 border transition-colors outline-none"
+                  className="block w-full rounded-md border-gray-300 pl-10 py-3 focus:border-[#1877F2] focus:ring-[#1877F2] sm:text-lg bg-gray-50 border transition-colors outline-none"
                   placeholder="0,00"
                   value={input.monthlyValue || ''}
                   onChange={(e) => handleInputChange('monthlyValue', parseFloat(e.target.value) || 0)}
@@ -117,14 +117,14 @@ function App() {
                     type="number"
                     min="0"
                     step="0.01"
-                    className="block w-full rounded-l-md border-gray-300 pl-8 py-3 focus:border-[#00bd56] focus:ring-[#00bd56] sm:text-lg bg-gray-50 border border-r-0 outline-none"
+                    className="block w-full rounded-l-md border-gray-300 pl-8 py-3 focus:border-[#1877F2] focus:ring-[#1877F2] sm:text-lg bg-gray-50 border border-r-0 outline-none"
                     placeholder="0.00"
                     value={input.interestRate || ''}
                     onChange={(e) => handleInputChange('interestRate', parseFloat(e.target.value) || 0)}
                     />
                  </div>
                 <select
-                  className="inline-flex items-center rounded-r-md border border-gray-300 bg-gray-100 px-3 text-gray-600 sm:text-sm focus:border-[#00bd56] focus:ring-[#00bd56] outline-none cursor-pointer hover:bg-gray-200"
+                  className="inline-flex items-center rounded-r-md border border-gray-300 bg-gray-100 px-3 text-gray-600 sm:text-sm focus:border-[#1877F2] focus:ring-[#1877F2] outline-none cursor-pointer hover:bg-gray-200"
                   value={input.interestRateType}
                   onChange={(e) => handleInputChange('interestRateType', e.target.value as RateType)}
                 >
@@ -141,12 +141,12 @@ function App() {
                 <input
                   type="number"
                   min="1"
-                  className="block w-full flex-grow rounded-l-md border-gray-300 px-4 py-3 focus:border-[#00bd56] focus:ring-[#00bd56] sm:text-lg bg-gray-50 border border-r-0 outline-none"
+                  className="block w-full flex-grow rounded-l-md border-gray-300 px-4 py-3 focus:border-[#1877F2] focus:ring-[#1877F2] sm:text-lg bg-gray-50 border border-r-0 outline-none"
                   value={input.period || ''}
                   onChange={(e) => handleInputChange('period', parseFloat(e.target.value) || 0)}
                 />
                 <select
-                  className="inline-flex items-center rounded-r-md border border-gray-300 bg-gray-100 px-3 text-gray-600 sm:text-sm focus:border-[#00bd56] focus:ring-[#00bd56] outline-none cursor-pointer hover:bg-gray-200"
+                  className="inline-flex items-center rounded-r-md border border-gray-300 bg-gray-100 px-3 text-gray-600 sm:text-sm focus:border-[#1877F2] focus:ring-[#1877F2] outline-none cursor-pointer hover:bg-gray-200"
                   value={input.periodType}
                   onChange={(e) => handleInputChange('periodType', e.target.value as PeriodType)}
                 >
@@ -159,10 +159,10 @@ function App() {
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#00bd56]/20 pt-6">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#1877F2]/20 pt-6">
             <button
               onClick={calculate}
-              className="w-full sm:w-auto px-8 py-3 bg-[#00bd56] hover:brightness-110 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-3 bg-[#1877F2] hover:brightness-110 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-lg flex items-center justify-center gap-2"
             >
               <DollarSign className="w-5 h-5" />
               Calcular
@@ -170,7 +170,7 @@ function App() {
 
             <button
                 onClick={reset}
-                className="w-full sm:w-auto text-gray-500 hover:text-[#00bd56] font-medium transition-colors flex items-center justify-center gap-2 px-4 py-2"
+                className="w-full sm:w-auto text-gray-500 hover:text-[#1877F2] font-medium transition-colors flex items-center justify-center gap-2 px-4 py-2"
             >
                 <Eraser className="w-4 h-4" />
                 Limpar campos
@@ -185,25 +185,25 @@ function App() {
                 {/* Summary Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Final Total */}
-                    <div className="bg-[#00bd56] rounded-xl p-6 text-white shadow-xl transform transition hover:scale-105">
-                        <p className="text-green-50 font-medium mb-1">Valor Total Final</p>
+                    <div className="bg-[#1877F2] rounded-xl p-6 text-white shadow-xl transform transition hover:scale-105">
+                        <p className="text-blue-50 font-medium mb-1">Valor Total Final</p>
                         <h3 className="text-3xl lg:text-4xl font-bold tracking-tight">
                             {formatCurrency(result.summary.totalAccumulated)}
                         </h3>
                     </div>
 
                     {/* Invested */}
-                    <div className="bg-white rounded-xl p-6 border border-[#00bd56]/30 shadow-md">
-                        <p className="text-[#00bd56] font-medium mb-1">Total Investido</p>
+                    <div className="bg-white rounded-xl p-6 border border-[#1877F2]/30 shadow-md">
+                        <p className="text-[#1877F2] font-medium mb-1">Total Investido</p>
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
                             {formatCurrency(result.summary.totalInvested)}
                         </h3>
                     </div>
 
                     {/* Interest */}
-                    <div className="bg-white rounded-xl p-6 border border-[#00bd56]/30 shadow-md">
-                        <p className="text-[#00bd56] font-medium mb-1">Total em Juros</p>
-                        <h3 className="text-2xl lg:text-3xl font-bold text-[#00bd56]">
+                    <div className="bg-white rounded-xl p-6 border border-[#1877F2]/30 shadow-md">
+                        <p className="text-[#1877F2] font-medium mb-1">Total em Juros</p>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-[#1877F2]">
                             {formatCurrency(result.summary.totalInterest)}
                         </h3>
                     </div>
@@ -223,7 +223,7 @@ function App() {
 
       </main>
 
-      <footer className="bg-[#00bd56] text-white py-8 mt-20 text-center">
+      <footer className="bg-[#1877F2] text-white py-8 mt-20 text-center">
         <div className="max-w-6xl mx-auto px-4">
             <p className="text-sm font-medium">&copy; {new Date().getFullYear()} Simulador de Juros Compostos. Todos os direitos reservados.</p>
             <p className="text-xs mt-2 text-white/80">Os cálculos são estimativas e não garantem rentabilidade futura.</p>

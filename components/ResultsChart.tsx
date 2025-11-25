@@ -23,8 +23,8 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data }) => {
     : data;
 
   return (
-    <div className="w-full h-[400px] bg-white p-4 rounded-lg shadow-sm border border-[#00bd56]/20">
-      <h3 className="text-center font-bold text-lg text-[#00bd56] mb-6">Gráfico de Evolução Patrimonial</h3>
+    <div className="w-full h-[400px] bg-white p-4 rounded-lg shadow-sm border border-[#1877F2]/20">
+      <h3 className="text-center font-bold text-lg text-[#1877F2] mb-6">Gráfico de Evolução Patrimonial</h3>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           data={displayData}
@@ -60,7 +60,7 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data }) => {
           />
           <Legend wrapperStyle={{ paddingTop: '20px' }} />
           
-          {/* Total Invested - Neutral Gray Line for contrast against the single green */}
+          {/* Total Invested - Neutral Gray Line for contrast against the single blue */}
           <Line
             type="monotone"
             dataKey="totalInvested"
@@ -71,14 +71,14 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data }) => {
             activeDot={{ r: 6 }}
           />
 
-          {/* Total Accumulated - The Single Green Color */}
+          {/* Total Accumulated - The Single Blue Color */}
           <Line
             type="monotone"
             dataKey="totalAccumulated"
             name="Total Acumulado"
-            stroke="#00bd56" 
+            stroke="#1877F2" 
             strokeWidth={3}
-            dot={{ r: 4, fill: '#fff', stroke: '#00bd56', strokeWidth: 2 }}
+            dot={{ r: 4, fill: '#fff', stroke: '#1877F2', strokeWidth: 2 }}
             activeDot={{ r: 6 }}
           />
 
@@ -87,7 +87,7 @@ export const ResultsChart: React.FC<ResultsChartProps> = ({ data }) => {
             type="monotone" 
             dataKey="totalInterest" 
             name="Total em Juros (Área)" 
-            fill="#00bd56" 
+            fill="#1877F2" 
             stroke="none" 
             opacity={0.15} 
           />
