@@ -1,0 +1,5 @@
+{
+  "name": "Simulador de Juros Compostos",
+  "description": "Uma ferramenta completa para simular investimentos com juros compostos, visualização gráfica e detalhamento mensal.",
+  "requestFramePermissions": []
+}
